@@ -1,0 +1,8 @@
+services:
+  menu_builder.item_type.chain:
+    class: MenuBuilderBundle\ItemType\ItemTypeChain
+
+  menu_builder.item_type.service.external_link:
+    class: MenuBuilderBundle\ItemType\Types\ExternalLink
+    tags:
+      - { name: menu_builder.item_type }
