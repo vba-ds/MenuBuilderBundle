@@ -19,7 +19,7 @@ interface ItemTypeInterface
     public function getRoute();
 
     /**
-     * @return array()
+     * @return array
      */
     public function getChildItems();
 }

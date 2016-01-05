@@ -1,0 +1,4 @@
+menu_builder:
+  admin:
+    group: Меню
+    group.menu: Редактор меню

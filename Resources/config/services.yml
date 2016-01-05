@@ -1,8 +1,12 @@
+parameters:
+  menu_builder.chain.class: MenuBuilderBundle\ItemType\ItemTypeChain
+  menu_builder.item_type.external_link.class: MenuBuilderBundle\ItemType\Types\ExternalLink
+
 services:
   menu_builder.item_type.chain:
-    class: MenuBuilderBundle\ItemType\ItemTypeChain
+    class: %menu_builder.chain.class%
 
   menu_builder.item_type.service.external_link:
-    class: MenuBuilderBundle\ItemType\Types\ExternalLink
+    class: %menu_builder.item_type.external_link.class%
     tags:
       - { name: menu_builder.item_type }

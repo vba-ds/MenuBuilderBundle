@@ -24,8 +24,11 @@ class MenuBuilderExtension extends ConfigurableExtension
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
 
+        $bundles = $container->getParameter('kernel.bundles');
+        if (isset($bundles['SonataAdminBundle'])) {
+            $loader->load('admin.yml');
+        }
+
         $container->setParameter('menu_builder', $mergedConfig);
     }
-
-
 }
